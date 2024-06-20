@@ -5,3 +5,23 @@
 // If the length of the array is 0, the function should return init.
 
 // Please solve it without using the built-in Array.reduce method.
+
+
+var reducer = function(arr, fn, init) {
+
+    let val = init;
+
+    for(let i = 0; i < arr.length; i++){
+        val = fn(val, arr[i])
+    }
+
+    return val;
+}
+
+const nums = [1,2,3,4];
+const fn = function sum(accum, curr) {return accum + curr};
+const init = 0;
+
+const result = reducer(nums, fn, init);
+
+console.log(result)

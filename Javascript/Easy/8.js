@@ -21,4 +21,5 @@ console.log(result); // Output: 65
 const fn1 = x => x + 1;
 const fn2 = x => 2 * x;
 
+// console
 console.log(fn1(fn2(4)))
